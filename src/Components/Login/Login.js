@@ -1,9 +1,10 @@
 import React from "react";
-import {Text, StyleSheet, View, onChangeText} from "react-native";
+import {Text, Image, View} from "react-native";
 import {TextInput} from 'react-native';
 
 import TouchableOpacity from "react-native-web/src/exports/TouchableOpacity";
 import LoginStyles from "./LoginStyles";
+
 
 //const nombre del componente
 const Login = () => {
@@ -16,11 +17,14 @@ const Login = () => {
         //agrupar elementos en un contenedor
 
         <View style={LoginStyles.view}>
-
             <View style={LoginStyles.subContainer}>
                 <Text style={LoginStyles.title}>
                     Login
                 </Text>
+                <View style={LoginStyles.logoView}>
+                    <Image style={[LoginStyles.imageLogo, LoginStyles.logoView]}
+                           source={require('../../../assets/logo3.png')}/>
+                </View>
                 <Text style={LoginStyles.subtitles}>
                     User
                 </Text>
