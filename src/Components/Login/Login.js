@@ -5,10 +5,9 @@ import LoginStyles from "./LoginStyles";
 
 
 //const nombre del componente
-const Login = () => {
+const Login = (props) => {
+
     //vista renderizada del componente
-
-
     const [user, onChangeText] = React.useState('');
     const [password, onChangePwd] = React.useState('');
     return (
@@ -39,10 +38,11 @@ const Login = () => {
                     secureTextEntry={true}
                     onChangeText={text => onChangePwd(text)}
                     value={password}/>
-
-
                 <TouchableOpacity
-                    style = {LoginStyles.loginButton}>
+                    style = {LoginStyles.loginButton}
+                    onPress={() => {
+                        props.navigation.navigate('Home')
+                    }}>
                     <Text style={LoginStyles.btnStyle} >Login</Text>
                 </TouchableOpacity>
             </View>

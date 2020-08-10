@@ -1,18 +1,20 @@
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 import Login from "./src/Components/Login/Login";
+import Home from "./src/Components/Home/Home";
 
 
 const navigator = createStackNavigator(
     {
-     Login: Login
+        Login: Login,
+        Home: Home
 
     },
     {
-      initialRouteName: "Login",
-      defaultNavigationOptions: {
-        title: "Lizeth_App"
-      }
+        initialRouteName: "Login",
+        defaultNavigationOptions: {
+            title: "Lizeth_App"
+        }
     }
 );
 
