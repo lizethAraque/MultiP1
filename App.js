@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import Login from "./src/Components/Login/Login";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>143</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const navigator = createStackNavigator(
+    {
+     Login: Login
+
+    },
+    {
+      initialRouteName: "Login",
+      defaultNavigationOptions: {
+        title: "Lizeth_App"
+      }
+    }
+);
+
+export default createAppContainer(navigator);
