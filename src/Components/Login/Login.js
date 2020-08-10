@@ -1,8 +1,6 @@
 import React from "react";
-import {Text, Image, View} from "react-native";
+import {Text, Image, View,TouchableOpacity} from "react-native";
 import {TextInput} from 'react-native';
-
-import TouchableOpacity from "react-native-web/src/exports/TouchableOpacity";
 import LoginStyles from "./LoginStyles";
 
 
@@ -18,13 +16,14 @@ const Login = () => {
 
         <View style={LoginStyles.view}>
             <View style={LoginStyles.subContainer}>
-                <Text style={LoginStyles.title}>
-                    Login
-                </Text>
+
                 <View style={LoginStyles.logoView}>
                     <Image style={[LoginStyles.imageLogo, LoginStyles.logoView]}
                            source={require('../../../assets/logo3.png')}/>
                 </View>
+                <Text style={LoginStyles.title}>
+                    Get started!
+                </Text>
                 <Text style={LoginStyles.subtitles}>
                     User
                 </Text>
@@ -40,6 +39,12 @@ const Login = () => {
                     secureTextEntry={true}
                     onChangeText={text => onChangePwd(text)}
                     value={password}/>
+
+
+                <TouchableOpacity
+                    style = {LoginStyles.loginButton}>
+                    <Text style={LoginStyles.btnStyle} >Login</Text>
+                </TouchableOpacity>
             </View>
         </View>
 

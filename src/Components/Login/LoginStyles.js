@@ -36,7 +36,22 @@ const LoginStyles = StyleSheet.create({
         justifyContent: 'center',
         alignSelf: 'center',
         paddingTop: 40
+    },
+    loginButton: {
+        color: 'white',
+        backgroundColor: 'rgb(27,188,232)',
+        borderRadius: 8,
+        marginTop: 32
+    },
+    btnStyle:{
+        height: 40,
+        textAlign: 'center',
+        color: 'white',
+        fontSize: 24
+
+
     }
+
 });
 
 export default LoginStyles;
