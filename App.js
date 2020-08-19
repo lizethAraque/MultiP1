@@ -13,7 +13,7 @@ const navigator = createStackNavigator(
     {
         initialRouteName: "Login",
         defaultNavigationOptions: {
-            title: "Lizeth_App"
+            title: "myAPP"
         }
     }
 );
